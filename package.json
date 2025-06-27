@@ -1,6 +1,6 @@
 {
   "name": "@bunrongGithub/microkit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "src/index.ts",
   "scripts": {
@@ -8,13 +8,16 @@
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run clean && npm run build"
   },
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "@bunrongGithub:registry": "https://npm.pkg.github.com"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@bunronggithub/microkit": "npm:@bunrongGithub/microkit@^1.0.0"
+    "@bunronggithub/microkit": "npm:@bunrongGithub/microkit@^1.0.2"
   },
   "devDependencies": {
     "@types/node": "^24.0.4",
