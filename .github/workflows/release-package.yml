@@ -1,4 +1,4 @@
-name: microkit packages
+name: Node.js Package
 
 on:
   push:
@@ -13,8 +13,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          registry-url: https://npm.pkg.github.com/
+          always-auth: true
       - run: npm ci
-      - run: npm start
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-gpr:
     needs: build
@@ -28,7 +31,10 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
+          always-auth: true
       - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
