@@ -10,5 +10,8 @@
     "@bunrongGithub:registry": "https://npm.pkg.github.com"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@bunronggithub/microkit": "npm:@bunrongGithub/microkit@^1.0.0"
+  }
 }

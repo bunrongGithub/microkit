@@ -1,7 +1,8 @@
-console.log(10)
+import { microkit } from "@bunronggithub/microkit";
 
+const result = microkit()
+console.log(result)
 
-export function microkit(){
-    return 'hello'
-}
-
+/**
+ * npm config set @bunronggithub:registry https://npm.pkg.github.com
+ */
